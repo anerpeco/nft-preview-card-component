@@ -1,0 +1,139 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-op: hsla(178, 100%, 50%, 0.502);
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-outfit: "Outfit", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--very-dark-blue-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-family: var(--font-outfit);
+    color: var(--soft-blue);
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.card-container {
+    border-radius: 1rem;
+    background-color: var(--very-dark-blue-card);
+    max-width: 23rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+    position: relative;
+}
+
+.cube-img {
+    margin-top: 2rem;
+    display: block;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.cube-img::before {
+    content: url('../images/icon-view.svg');
+    background-color: var(--cyan);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s;
+}
+
+.cube-img:focus::before,
+.cube-img:hover::before {
+    opacity: 1;
+    background-color: var(--cyan-op);
+}
+
+.card-content h1 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--white);
+    padding: 2rem 0 1rem;
+}
+
+.card-content h1:focus,
+.card-content h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+
+.card-content p {
+    padding-bottom: 1rem;
+}
+
+.variant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 0.06rem var(--very-dark-blue-line);
+}
+
+.variant p img {
+    display: inline-block;
+    vertical-align: -.2rem;
+    margin-right: .25rem;
+}
+
+.variant .eth {
+    color: var(--cyan);
+}
+
+.card-creator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.card-creator p img {
+    display: inline-block;
+    width: 2rem;
+    vertical-align: middle;
+    border: solid 0.06rem var(--white);
+    border-radius: 2rem;
+    margin-right: 1rem;
+}
+
+.card-creator span {
+    color: var(--white);
+}
+
+.card-creator span:focus,
+.card-creator span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
