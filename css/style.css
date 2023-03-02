@@ -11,49 +11,44 @@
 }
 
 body {
-    min-height: 100vh;
-    background-color: var(--very-dark-blue-main);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue-main);
     font-family: var(--font-outfit);
     color: var(--soft-blue);
-    font-weight: 300;
-    font-size: 1.3rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
 }
 
 .card-container {
-    border-radius: 1rem;
-    background-color: var(--very-dark-blue-card);
-    max-width: 23rem;
-}
-
-.card-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 2rem;
-    position: relative;
+    padding: 1.5rem 1.5rem 2rem;
+    background-color: var(--very-dark-blue-card);
+    border-radius: .9375rem;
+    box-shadow: 0rem 1.5625rem 3.125rem rgba(0, 0, 0, 0.0952917);
+    max-width: 21.875rem;
 }
 
 .cube-img {
-    margin-top: 2rem;
-    display: block;
-    border-radius: 0.5rem;
-    overflow: hidden;
     position: relative;
+    display: block;
+    border-radius: .5rem;
+    overflow: hidden;
 }
 
 .cube-img::before {
+    position: absolute;
     content: url('../images/icon-view.svg');
     background-color: var(--cyan);
-    position: absolute;
     height: 100%;
     width: 100%;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     top: 0;
     display: flex;
     align-items: center;
@@ -68,35 +63,41 @@ body {
     background-color: var(--cyan-op);
 }
 
-.card-content h1 {
-    font-size: 1.7rem;
+.card-container h1 {
+    font-size: 22px;
     font-weight: 600;
+    line-height: 28px;
     color: var(--white);
-    padding: 2rem 0 1rem;
+    margin-top: 24px;
 }
 
-.card-content h1:focus,
-.card-content h1:hover {
+.card-container h1:focus,
+.card-container h1:hover {
     color: var(--cyan);
     cursor: pointer;
 }
 
 
-.card-content p {
-    padding-bottom: 1rem;
+.card-container p {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.625rem;
+    margin-top: 1rem;
 }
 
 .variant {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: solid 0.06rem var(--very-dark-blue-line);
+    border-bottom: solid .06rem var(--very-dark-blue-line);
+    padding-bottom: 1.5rem;
+    padding-top: .5rem;
 }
 
 .variant p img {
     display: inline-block;
-    vertical-align: -.2rem;
-    margin-right: .25rem;
+    vertical-align: -0.2rem;
+    margin-right: .4375rem;
 }
 
 .variant .eth {
@@ -107,15 +108,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 1rem;
 }
 
 .card-creator p img {
     display: inline-block;
-    width: 2rem;
+    width: 2.0625rem;
     vertical-align: middle;
-    border: solid 0.06rem var(--white);
-    border-radius: 2rem;
+    border: solid .06rem var(--white);
+    border-radius: 50%;
     margin-right: 1rem;
 }
 
@@ -127,13 +127,4 @@ body {
 .card-creator span:hover {
     color: var(--cyan);
     cursor: pointer;
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
 }
